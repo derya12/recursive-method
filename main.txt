@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class recursive {
+    static void main(int number,int temp,boolean control){
+        System.out.print(temp+" ");
+        if (!control && number==temp){
+            return;
+        }
+        if (control){
+            main(number,temp-5,temp-5>0);
+        }
+        else{
+            main(number,temp+5,false);
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+        System.out.print("Bir Sayı Giriniz:");
+        int num= inp.nextInt();
+        System.out.print("Sonuç: ");
+        main(num,num,true);
+    }
+}
